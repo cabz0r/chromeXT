@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Regex Extractor",
+  "version": "1.0",
+  "description": "Chrome extension to automatically extract information using regex",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
